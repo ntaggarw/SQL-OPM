@@ -1,9 +1,7 @@
+package main;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.SQLWarning;
 import java.util.Scanner;
 import static java.lang.System.*;
 
@@ -13,7 +11,7 @@ public class Lamain {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(new File("database.txt"));
+        Scanner sc = new Scanner(new File("main/database.txt"));
         DATABASE_LOCATION = sc.nextLine();
         sc.close();
 
