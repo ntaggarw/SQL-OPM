@@ -1,17 +1,18 @@
-package main;
-
+import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Scanner;
+import java.io.File;
 import static java.lang.System.*;
 
 public class Lamain {
 
-    public String DATABASE_LOCATION = "";
+    public static String DATABASE_LOCATION = "";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, SQLException {
 
-        Scanner sc = new Scanner(new File("main/database.txt"));
+        Scanner sc = new Scanner(new File("database.txt"));
         DATABASE_LOCATION = sc.nextLine();
         sc.close();
 
